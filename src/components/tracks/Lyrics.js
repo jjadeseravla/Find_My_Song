@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import Spinner from '../layout/Spinner';
 
 class Lyrics extends Component {
@@ -67,7 +68,16 @@ class Lyrics extends Component {
       )  {
         return <Spinner />;
      } else {
-       return <h1> Data returned </h1>
+       return (
+         <React.Fragment>
+           <Link to="/" className="btn btn-dark btn-sm mb-4">Go Back</Link>
+            <div className="card">
+              <div className="card-header">
+                {track.track_name} by <span className="text-secondary">{track.artist_name}</span>
+              </div>
+            </div>
+         </React.Fragment>
+       );
      }
   }
 }
