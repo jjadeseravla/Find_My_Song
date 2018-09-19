@@ -2,8 +2,10 @@
   "name": "find_my_song",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://jjadeseravla.github.io/Find_My_Song",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.0",
     "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -14,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
